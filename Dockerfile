@@ -1,9 +1,7 @@
 # base from centos 6.9 (https://hub.docker.com/r/italoc/php53)
 FROM italoc/php53 
 
-RUN groupadd -g 999 appuser && \
-    useradd -r -u 999 -g appuser appuser
-USER appuser
+USER root
 
 # delete apache dari imagenya
 RUN yum -y remove httpd
